@@ -4,6 +4,8 @@
 .search{
     color:red;
     padding-top:70px;
+    // display:flex;
+    text-shadow: 1px 1px white;
 }
 .no-left-padding{
     padding-left:0px!important;
@@ -13,4 +15,9 @@ padding-right:0px!important;
 }
 .rates{
     display:inline-block;
+    color:white;
+    // border: white;
+}
+.welcome{
+    text-shadow: 3px 3px red;
 }

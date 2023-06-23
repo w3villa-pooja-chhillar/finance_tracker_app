@@ -4,12 +4,21 @@
 body{
     background-repeat: no-repeat;
      background-position: center;
+     font-family: 'Dancing Script', cursive;
+    //  color:white;
+// font-family: 'Quicksand', sans-serif;
+// font-family: 'Roboto', sans-serif;
      background-size: cover;
      height:90vh;
      object-fit: cover;
      position:relative;
-     background-color: darkslategray;
+     background-color: rgba(0,0,0,0.6);
+     background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_zgB3FIgpAOrquOxbxdfqk-aMD2YLr6tLLILdx6JjB5B5ivaj-KHPzIWHSszhmxCyd-k&usqp=CAU');
      //  background-image: url("https://i.pinimg.com/236x/3e/8e/a9/3e8ea960694b21d78937038365b0a14f.jpg");
+}
+body background-image{
+    object-fit:cover;
+    opacity:0.4;
 }
 #home{
     font-family: 'Quicksand', sans-serif;
@@ -19,7 +28,7 @@ body{
     color: black;
     margin-top:30px;
     // border:1px solid white;
-    text-shadow: 1px 1px white;
+    text-shadow: 3px 3px white;
 }
 #finance{
     height: 230px;
@@ -48,3 +57,25 @@ body{
 // .navbar-brand {
 //     font-size: 3rem;
 // }
+.heading{
+    margin-top:40px;
+    display:flex;
+    justify-content:center;
+    color:white;
+}
+.logo{
+    color:green;
+    text-shadow: 0.6px 0.7px red;
+}
+.no_route{
+    color:white;
+    text-shadow :2px 2px green ;
+    display:flex;
+    justify-content:center;
+    margin-top: 220px;
+}
+.user_name{
+    color: black;
+    padding-top:9px;
+    padding-right:7px;
+}
