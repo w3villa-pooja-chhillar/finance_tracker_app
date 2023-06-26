@@ -1,0 +1,46 @@
+
+<div class='search-area'>
+  <h3 class="search_frnd"><b>Search Friends</b></h3>
+  <%= form_tag search_friend_path, remote: true, method: :get do %>
+    <div class="form-group row">
+      <div class="col-sm-9 no-right-padding">
+        <%= text_field_tag :friend, params[:friend], placeholder: "Name or email", autofocus: true, class: "form-control form-control-lg" %>
+      </div>
+      <div class="col-sm-3 no-left-padding">
+        <%= button_tag type: :submit, class: "btn btn-success" do %>
+          <%= fa_icon 'search 2x' %>
+        <% end %>
+      </div>
+    </div>
+  <% end %> 
+</div>
+
+<div id="friend-results">
+
+</div>
+<% if !@friends.empty? %>
+<div class="friend_list">
+<table class="table table-dark table-hover">
+  <thead>
+    <tr>
+      <th scope="col">Email</th>
+      <th scope="col">First_name</th>
+      <th scope="col">Last_name</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+  <% @friends.each do|friend| %>
+    <tr>
+      <td><%= friend.email %></td>
+      <td><%= friend.first_name%></td>
+      <td><%= friend.last_name%></td>
+<td>      <%= link_to 'view Profile', user_path(friend),class: 'btn btn-sm btn-success' %>
+
+<%= link_to 'Stop following', friendship_path(friend), method: :delete, data: {confirm: 'Are you sure?'},class: 'btn btn-sm btn-warning' %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
+<% end %>
